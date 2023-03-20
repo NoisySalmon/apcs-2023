@@ -40,8 +40,29 @@ public class Baum {
         return root;
     }
 
+    static void printTreeIter(Baum baum) {
+        System.out.println(baum.label);
+        for (Baum child : baum.children) {
+            System.out.println(child.label);
+            for (Baum grand : child.children) {
+                System.out.println(grand.label);
+                //for...
+            }
+        }
+
+    }
+
+    static void printTree(Baum baum) {
+        System.out.println(baum.label);
+        for (Baum child : baum.children) {
+            printTree(child);
+        }
+
+    }
+
     public static void main(String[] args) {
         Baum fsTree = filesystemTree();
+        printTree(fsTree);
     }
 
 }
