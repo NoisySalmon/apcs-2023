@@ -9,13 +9,31 @@ public class Recur {
             return 3 * fun3(n - 1);
     }
 
-    public static int f(int n) {
+    public static int fib(int n) {
         if (n == 0)
             return 0;
         else if (n == 1)
             return 1;
-        else
-            return f(n - 1) + f(n - 2);
+        else {
+            return fib(n - 1) + fib(n - 2);
+        }
+    }
+
+    static long[] memo = new long[100];
+
+    public static long fibm(int n) {
+        if (n == 0)
+            return 0;
+        else if (n == 1)
+            return 1;
+        else {
+            if (memo[n] > 0) {
+                return memo[n];
+            } else {
+                memo[n] = fibm(n - 1) + fibm(n - 2);
+                return memo[n];
+            }
+        }
     }
 
     public static boolean has(String input) {
@@ -66,6 +84,8 @@ public class Recur {
 
         // Consider function f
         // System.out.println(f(6));
+        //System.out.println(fib(50)); // never completes
+        System.out.println(fibm(50));
 
         // Consider function has
         // System.out.println(has("hello"));
