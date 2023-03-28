@@ -122,5 +122,12 @@ public class Scramble2 {
 
         Scramble.shuffle(arr2);
         System.out.println("Shuffled: " + Arrays.toString(arr2));
+
+        String[] folks = {"Marley Baker", "Isaac Briefer", "Mikiah Dunham", "Noah Dunham", "Sean Dyer", "Marc Filiberto-Linares", "Aaliyah Hall", "Clara Jeong", "Aaron Johnson", "Naomi Norgard", "Max Olsen", "Frank Peterson", "Will Peterson", "Logan Rainchild", "Billy Read", "Mya Rygg", "Tessa Shainin", "Kai Wallis"};
+        //mergeSort(folks);
+        System.out.println("Sorted: " + Arrays.toString(folks));        
+        //shuffle(folks);
+        System.out.println("Shuffled: " + Arrays.toString(folks));     
+
     }
 }
