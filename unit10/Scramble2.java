@@ -3,7 +3,7 @@ package unit10;
 import java.util.Arrays;
 
 public class Scramble2 {
- /**
+    /**
      * Sorts the array using the Merge Sort algorithm.
      * Modified code from https://www.baeldung.com/java-merge-sort
      * 
@@ -35,8 +35,8 @@ public class Scramble2 {
         // pointers for left array (i), right array (j), and combined array (k)
         int i = 0, j = 0, k = 0;
         while (i < left && j < right) {
-            //if (l[i] <= r[j]) {
-            if(l[i].compareTo(r[j])<=0){
+            // if (l[i] <= r[j]) {
+            if (l[i].compareTo(r[j]) <= 0) {
                 arr[k++] = l[i++];
             } else {
                 arr[k++] = r[j++];
@@ -170,11 +170,14 @@ public class Scramble2 {
         Scramble.shuffle(arr2);
         System.out.println("Shuffled: " + Arrays.toString(arr2));
 
-        String[] folks = {"Marley Baker", "Isaac Briefer", "Mikiah Dunham", "Noah Dunham", "Sean Dyer", "Marc Filiberto-Linares", "Aaliyah Hall", "Clara Jeong", "Aaron Johnson", "Naomi Norgard", "Max Olsen", "Frank Peterson", "Will Peterson", "Logan Rainchild", "Billy Read", "Mya Rygg", "Tessa Shainin", "Kai Wallis"};
+        String[] folks = { "Marley Baker", "Isaac Briefer", "Mikiah Dunham", "Noah Dunham", "Sean Dyer",
+                "Marc Filiberto-Linares", "Aaliyah Hall", "Clara Jeong", "Aaron Johnson", "Naomi Norgard", "Max Olsen",
+                "Frank Peterson", "Will Peterson", "Logan Rainchild", "Billy Read", "Mya Rygg", "Tessa Shainin",
+                "Kai Wallis" };
         mergeSort(folks);
-        System.out.println("Sorted: " + Arrays.toString(folks));        
-        //shuffle(folks);
-        System.out.println("Shuffled: " + Arrays.toString(folks));     
+        System.out.println("Sorted: " + Arrays.toString(folks));
+        // shuffle(folks);
+        System.out.println("Shuffled: " + Arrays.toString(folks));
 
     }
 }

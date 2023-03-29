@@ -80,15 +80,15 @@ public class Scramble {
      */
     public static void shuffle(int arr[]) {
         int n = arr.length;
-        for(int i = 0; i < n; i++){
-            int j = (int)(Math.random() * (i+1));
+        for (int i = n - 1; i > 1; i--) {
+            int j = (int) (Math.random() * (i + 1));
             int temp = arr[j];
             arr[j] = arr[i];
             arr[i] = temp;
         }
-// for i from n−1 downto 1 do
-//      j ← random integer such that 0 ≤ j ≤ i
-//      exchange a[j] and a[i]
+        // for i from n−1 downto 1 do
+        // j ← random integer such that 0 ≤ j ≤ i
+        // exchange a[j] and a[i]
     }
 
     public static void main(String args[]) {
