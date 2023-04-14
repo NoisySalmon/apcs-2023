@@ -92,6 +92,15 @@ public class Exam {
             return banana(b, a % b);
     }
 
+    public int bananana(int a, int b) {
+        while (b > 0 ){
+            int tmp = b;
+            b = a % b;
+            a = tmp;
+        }
+        return a;
+    }
+
     public static int apple(int arr[], int n) {
         if (n <= 0)
             return 0;
@@ -135,25 +144,8 @@ public class Exam {
         }
     }
 
-    static int banana2(int a, int b) {
-        int holdb = 0;
-        while (b != 0) {
-            holdb = b;
-            b = a % holdb;
-            a = holdb;
-        }
-        return a;
-    }
 
-    static int banana3(int a, int b) {
-        // for (int i = b; i > 0; i = k % b) {
-        for (int i = b; i != 0;) {
-            int k = i;
-            i = a % i;
-            a = k;
-        }
-        return a;
-    }
+
 
     public static int mystery(int n) {
         if (n <= 1)
@@ -182,9 +174,13 @@ public class Exam {
     }
 
     static int ireallywantaforloop(int a, int b) {
-        // int tmp;
-        // for ( ; ; ) {
-        // }
+        
+        int tmp;
+        for (int ban = b ;b>0 ;a = tmp) {
+            tmp = b;
+            b = a % b;
+
+        }
         return a;
     }
 
@@ -207,11 +203,13 @@ public class Exam {
         System.out.println("Bonus: " + foo(5, 3));
         System.out.println(scoreExam(49));
         System.out.println(scoreExam(73));
+        System.out.println(e.banana(15996751, 3870378));
+        System.out.println(e.bananana(15996751, 3870378));
 
         // System.out.println("b3: " + banana3(15996751, 3870378));
-        // System.out.println("kai " + kai(15996751, 3870378));
+        System.out.println("kai " + kai(15996751, 3870378));
         // System.out.println("hi");
-        // System.out.println("for " + ireallywantaforloop(15996751, 3870378));
+        System.out.println("for " + ireallywantaforloop(15996751, 3870378));
     }
 
 }
