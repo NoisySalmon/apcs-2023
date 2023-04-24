@@ -4,8 +4,8 @@ package unit11.b;
 public class Bucket {
     private int value;
 
-    public Bucket(int value) {
-        this.value = value;
+    public Bucket(int val) {
+        this.value = val;
     }
 
     public int getValue() {
@@ -20,6 +20,8 @@ public class Bucket {
 
     static void updateValue(Bucket b) {
         b.setValue(5);
+        System.out.println("inst method:" + b.getValue());
+
     }
 
     void updateValue() {
@@ -33,25 +35,27 @@ public class Bucket {
     // what does static mean?
     // what is by value vs. by reference?
 
-    static void updateValue(int value) {
-        value = 5;
+    static void updateValue(int val) {
+        val = 5;
+        System.out.println("method:" + val);
     }
 
     public static void main(String[] args) {
         // explore: predict before uncommenting
         int value = 3;
-        // value = 5;
-        System.out.println(value);
+        //value = 5;
+        // System.out.println(value);
 
         // System.out.println("Within method:");
         // updateValue(value);
         // System.out.println(value);
 
-        // System.out.println("Within bucket:");
-        // Bucket b = new Bucket(value);
-        // b.value = 5;
-        // updateValue(valueBucket);
-        // updateValueDirect(b);
-        // System.out.println(b.getValue());
+        System.out.println("Within bucket:");
+        Bucket b = new Bucket(value);
+        System.out.println(b.getValue());
+                //b.value = 5;
+        updateValue(b);
+        //updateValueDirect(b);
+        System.out.println(b.getValue());
     }
 }
