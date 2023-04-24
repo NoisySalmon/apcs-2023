@@ -4,16 +4,20 @@ package unit11.b;
 // https://birdsarentreal.com/
 public class Bird {
     public static void main(String[] args) {
-
+        //          012345
         String s = "turkey";
-        // predict before uncommenting
-        // System.out.println(s.substring(1, 4));
+        // predict before uncommenting        
+        System.out.println(s.substring(1, 4));
 
         String t = new String("turkey");
-        // System.out.println(s == t);
+        System.out.println(s == t);
+        // explicit strings come from the String Pool
+        System.out.println(s == "turkey");
+        System.out.println("turkey" == t); // false, t is a "new" object
+        System.out.println(s.equals(t));
 
         int x = 3 % 7;
-        // System.out.println(x);
+        System.out.println(x);
 
         String w = "ans: " + 4 + 5;
         // System.out.println(w);
