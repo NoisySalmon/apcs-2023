@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Infinite Scrolling Example</title>
+    <style>
+      #scrollable-content {
+        height: 300px;
+        overflow-y: scroll;
+      }
+
+      .hashtag {
+        display: flex;
+        justify-content: space-between;
+        align-items: left;
+        padding: 8px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .hashtag-actions {
+        display: flex;
+        gap: 8px;
+      }
+
+      .hashtag-actions button {
+        padding: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="search-input"
+      placeholder="Search hashtags"
+      oninput="filterHashtags()"
+    />
+    <select id="category-filter" onchange="filterHashtags()">
+      <option value="">All Categories</option>
+      <option value="Job">Job</option>
+      <option value="Referral">Referral</option>
+      <!-- Add more categories here -->
+    </select>
+    <div id="scrollable-content">
+      <ul id="item-list">
+        <!-- Initial set of items -->
+        <li class="hashtag">
+          <div class="hashtag-name">#jobapp</div>
+          <div class="hashtag-description">completed a job application</div>
+          <div class="hashtag-category">Category: Job</div>
+          <div class="hashtag-actions">
+            <button onclick="editHashtag(this)">Edit</button>
+            <button onclick="deleteHashtag(this)">Delete</button>
+          </div>
+        </li>
+        <li class="hashtag">
+          <div class="hashtag-name">#nwisref</div>
+          <div class="hashtag-description">referred to NWIS</div>
+          <div class="hashtag-category">Category: Referral</div>
+          <div class="hashtag-actions">
+            <button onclick="editHashtag(this)">Edit</button>
+            <button onclick="deleteHashtag(this)">Delete</button>
+          </div>
+        </li>
+        <!-- More hashtags can be added here -->
+      </ul>
+    </div>
+
+    <button onclick="createHashtag()">Create Hashtag</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
