@@ -40,7 +40,7 @@ jobs:
         with:
           # Upload entire repository
           name: index.html
-          path: './project/'        
+          path: './project'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
