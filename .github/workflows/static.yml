@@ -39,7 +39,9 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload project
-          path: './project'
+          path: | 
+            './project/index.html'
+            './project/script.js
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
